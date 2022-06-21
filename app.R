@@ -4,7 +4,7 @@
 #   Lue Ping Zhao & Michael Zhao   #
 #         June 15, 2022            #
 ####################################
-#source("ais.R")
+source("ais.R")
 #results=AIS(preddata, variant_prop, variant_corehap)
 
 ####################################

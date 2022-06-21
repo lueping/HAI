@@ -17,10 +17,12 @@ require(stringdist); require(irr); require(xlsx);require(limma);require(pbapply)
 # Loading data
 # load(file="../fast0.0/data/training ID.Rdata")
 # load(file="../fast0.0/result/full training result.Rdata")
-load(file="data/pred_data_2022_05_18.Rdata")
-load(file="D:/AAAA/Projects/COVID19-viral genomics/Fast/data/ref seq.Rdata"); rownames(ref_AA)=sub("-","_", rownames(ref_AA))
-load(file="../fast0.0/workingfiles/hap cores.Rdata")
+load(file="data/preddata_2022_05_18_part.Rdata")
+load(file="data/ref seq.Rdata"); rownames(ref_AA)=sub("-","_", rownames(ref_AA))
+load(file="data/hap cores.Rdata")
 
+#pred_data=metadata[sample(1:10307470, size=200000),]
+#save(pred_data, file="data/preddata_2022_05_18_part.Rdata")
 #save(ex_data, file="data/exampledata.Rdata")
 #load(file="data/exampledata.Rdata"); pred_data=ex_data
 #write.csv(pred_data, file="data/example.csv")
