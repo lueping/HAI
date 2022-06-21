@@ -25,7 +25,7 @@ ui <- fluidPage(theme = shinytheme("united"),shinyjs::useShinyjs(),
 									wellPanel(
 										tags$label("Step 1 - Enter your data",style="float: none; width: 100%;"),
 										actionLink("addlink", "Insert example data"),
-										tags$textarea(id="predata", rows=10, cols=100, style="float: none; width:100%;", "EPI_ISL_11657253,EPI_ISL_11657258,EPI_ISL_4579449,..."),
+										tags$textarea(id="predata", rows=10, cols=100, style="float: none; width:100%;", "EPI_ISL_2535080,EPI_ISL_9164243,EPI_ISL_6945682,EPI_ISL_10910169,EPI_ISL_759612,EPI_ISL_12500362,..."),
 										uiOutput('file1_ui'),
 										tags$label("Step 2 - Submit your job",style="float: none; width: 100%;"),
 										actionButton("submitbutton", "Predict", class = "btn btn-primary"),
@@ -88,7 +88,9 @@ server <- function(input, output, session) {
 	# Default example data
 	observe({
 		FASTADATA <- ''
-		fastaexample <- 'EPI_ISL_11657253,EPI_ISL_11657258,EPI_ISL_4579449,EPI_ISL_11657167,EPI_ISL_4579450,EPI_ISL_11524493,EPI_ISL_11657362,EPI_ISL_11657367,EPI_ISL_11657241,EPI_ISL_11657365'
+		fastaexample <- 'EPI_ISL_2535080,EPI_ISL_9164243,EPI_ISL_6945682,EPI_ISL_10910169,EPI_ISL_759612,EPI_ISL_12500362,EPI_ISL_8932290,EPI_ISL_6167645, 
+		EPI_ISL_3130164,EPI_ISL_1287358,EPI_ISL_9490703,EPI_ISL_12361600,EPI_ISL_2565162,EPI_ISL_2865667,EPI_ISL_1660382,EPI_ISL_6859660,
+		EPI_ISL_8336438,EPI_ISL_1092367,EPI_ISL_11748114,EPI_ISL_4245269,EPI_ISL_8079238,EPI_ISL_10795053,EPI_ISL_3554123,EPI_ISL_2343683, EPI_ISL_8488617'
 		xdata=""
 		m_parameters=c(prob_threshold=0.99, min_prob=0.1, min_AA=2)
 		
